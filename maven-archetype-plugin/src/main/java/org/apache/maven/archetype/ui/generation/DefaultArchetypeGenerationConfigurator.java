@@ -154,9 +154,9 @@ public class DefaultArchetypeGenerationConfigurator
         {
             boolean confirmed = false;
             Context context = new VelocityContext();
-            context.put( Constants.GROUP_ID, ad.getGroupId() );
-            context.put( Constants.ARTIFACT_ID, ad.getArtifactId() );
-            context.put( Constants.VERSION, ad.getVersion() );
+            context.put( Constants.GROUP_ID, archetypeConfiguration.getProperty(Constants.GROUP_ID) );
+            context.put( Constants.ARTIFACT_ID, archetypeConfiguration.getProperty(Constants.ARTIFACT_ID) );
+            context.put( Constants.VERSION, archetypeConfiguration.getProperty(Constants.VERSION) );
             while ( !confirmed )
             {
                 List<String> propertiesRequired = archetypeConfiguration.getRequiredProperties();
